@@ -6,6 +6,8 @@ public abstract class ship {
 	
 	protected String shipSize;
 	
+	protected String shipClassName;
+	
 	protected String shipClass;
 	
 	protected String owner;
@@ -15,6 +17,10 @@ public abstract class ship {
 	public ship(String shipsize) {
 		this.shipSize = shipsize;
 		
+	}
+	
+	public int getEnemyCount() {
+		return enemies;
 	}
 	
 	public abstract void shipClassRoller();
@@ -27,10 +33,12 @@ public abstract class ship {
 	
 	public abstract void shipNameRoll() throws FileNotFoundException;
 	
+	public abstract void shipClassNameRoll() throws FileNotFoundException;
+	
 	@Override
 	public String toString() {
 		
-		return String.format("%s, a %s class %s, with %d enemies on board.", name, shipSize, shipClass, enemies);
+		return String.format("%s, a %s class %s, with %d enemies on board.", name, shipClassName, shipClass, enemies);
 		
 	}
 }

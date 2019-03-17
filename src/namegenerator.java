@@ -21,6 +21,7 @@ public class namegenerator {
 			}
 		}
 		
+		scnr.close();
 		return name;
 		
 	}

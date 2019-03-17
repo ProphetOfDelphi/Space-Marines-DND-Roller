@@ -11,12 +11,12 @@ public class smallship extends ship {
 	public void shipClassRoller() {
 		Random picker = new Random();
 		
-		int pick = picker.nextInt(20);
+		int pick = picker.nextInt(6);
 		
 		switch(pick) {
 		
 		case 1:
-			shipClass = "Solar Sailer";
+			shipClass = "Small Destroyer";
 			break;
 		case 2:
 			shipClass = "Corvette";
@@ -29,51 +29,6 @@ public class smallship extends ship {
 			break;
 		case 5:
 			shipClass = "Blockade Runner";
-			break;
-		case 6:
-			shipClass =  "Small Cargo Runner";
-			break;
-		case 7:
-			shipClass = "Tugboat";
-			break;
-		case 8:
-			shipClass = "Fighter";
-			break;
-		case 9:
-			shipClass = "Bomber";
-			break;
-		case 10:
-			shipClass = "Small Merchant Vessel";
-			break;
-		case 11:
-			shipClass = "Collier";
-			break;
-		case 12:
-			shipClass = "Patrol Ship";
-			break;
-		case 13:
-			shipClass = "Clipper";
-			break;
-		case 14:
-			shipClass = "Sloop-of-war";
-			break;
-		case 15:
-			shipClass =  "Pirate Steamer";
-			break;
-		case 16:
-			shipClass = "Gunboat";
-			break;
-		case 17:
-			shipClass = "Point Defense Ship";
-			break;
-		case 18:
-			shipClass = "Brig";
-			break;
-		case 19:
-			shipClass = "Monitor";
-			break;
-		case 20: 
-			shipClass =  "Xebec";
 			break;
 		default:
 			shipClass =  "Small Merchantman";
@@ -88,16 +43,30 @@ public class smallship extends ship {
 	}
 
 	public void shipEnemyRoll(String shipClass) {
-		enemies = 3;
+		Random roll = new Random();
+		int preEnemies = roll.nextInt(6);
+		 if (preEnemies == 0) {
+			 enemies = 2;
+		 }
+		 else {
+			 enemies = preEnemies;
+		 }
 	}
 
 	public void ownerRoll(String shipClass) {
-		owner = "Darjeeling Space Co";
+		owner = "Lithua Confederation";
 	}
 
 	public void shipNameRoll() throws FileNotFoundException{
 		namegenerator pol = new namegenerator();
 		name = pol.generator();
+	}
+
+	@Override
+	public void shipClassNameRoll() throws FileNotFoundException {
+		classroller roll = new classroller();
+		shipClassName = roll.generator(shipClass);
+		
 	}
 
 }

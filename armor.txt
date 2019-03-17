@@ -1,0 +1,3 @@
+Heavy Armor
+Medium Armor
+Light Armor
