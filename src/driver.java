@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 public class driver {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		smallship test1 = new smallship("small", "small");
+		smallship test1 = new smallship("small");
 		
 		test1.shipClassRoller();
 		test1.shipNameRoll();

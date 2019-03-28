@@ -1,4 +1,4 @@
-Clockwork Rifle
-Clockwork Repeater
-Scatter Rifle
-Handheld Mass Driver
+Blyskawica SMG
+Grom LMG
+Mlot Assault Shotgun
+Kowadlo Riot Shield

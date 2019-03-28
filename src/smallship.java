@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class smallship extends ship {
 
-	public smallship(String name, String shipsize) {
+	public smallship(String shipsize) {
 		super(shipsize);
 		
 	}
